@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Random Password Generator</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="index.css">
+
+<body>
+
+<div class="card">
+    <div class="heading">
+        <h1>Generate a<br><span>random password</span></h1>
+        <p>Never use an insecure password again.</p>
+    </div>
+
+    <!-- Options -->
+    <div class="options" id="options">
+        <label class="opt active"><input type="checkbox" value="upper" checked><span class="dot"></span>Uppercase</label>
+        <label class="opt active"><input type="checkbox" value="lower" checked><span class="dot"></span>Lowercase</label>
+        <label class="opt active"><input type="checkbox" value="numbers" checked><span class="dot"></span>Numbers</label>
+        <label class="opt active"><input type="checkbox" value="symbols" checked><span class="dot"></span>Symbols</label>
+    </div>
+
+    <!-- Length -->
+    <div class="length-row">
+        <label>Length</label>
+        <input type="range" id="lengthSlider" min="8" max="32" value="16"/>
+        <span class="val" id="lengthVal">16</span>
+    </div>
+
+      <!-- Button -->
+    <button class="btn-generate" id="generateBtn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+        </svg>
+        Generate passwords
+    </button>
+
+    <div class="divider"></div>
+
+    <div class="password-grid" id="passwordGrid">
+        <p class="empty-state">Click "Generate passwords" to get started.</p>
+    </div>
+</div>
+
+<div class="toast" id="toast">Copied!</div>
+
+</body>
+
+<script src="index.js"></script>
+
+</html>
